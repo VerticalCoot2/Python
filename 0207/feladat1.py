@@ -14,6 +14,9 @@ def afeladat(s1,s2):
         h=s1/s2
         print(round(h),3)
 
+def bfeladat(s1,s2):
+
+
 system("cls")
 def Main():
     so1= int(input("Kérem az 1. tenger sótartalmát"))
