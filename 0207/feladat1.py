@@ -20,7 +20,17 @@ def bfeladat(s1,s2):
         return"paros"
     else:
         return"Páratlan"
-    
+
+
+def dfeladat(solista):
+    elteresek=[]
+    for i in range(0,len(solista)):
+        if solista[i]>35:
+            elteresek.append(solista[i]+35)
+        else:
+            elteresek.append(35-solista[i])
+    return elteresek
+
 
 
 system("cls")
@@ -31,7 +41,13 @@ def Main():
     afeladat(so1,so2)
     print("a.) feladat")
     print(bfeladat(so1,so2))
-    
+    print("c.) feladat")
+    sotartalmak =[]
+    for i in range(0,20):
+        sotartalmak.append(random.randrange(30,41))
+    print(*sotartalmak)
+    print(*dfeladat(sotartalmak))
+
 
 if __name__=="__main__":
     Main()
