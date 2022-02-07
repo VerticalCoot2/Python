@@ -1,0 +1,30 @@
+.szines
+{
+    color: lightsalmon;
+}
+*
+{
+font-family: 'Courier New', Courier, monospace;
+}
+body
+{
+    background-color: lightskyblue;
+}
+p:first-letter
+{
+font-size: 60px;
+}
+p:hover
+{
+    color: limegreen;
+    background-color: #000;
+}
+h1
+{
+    text-align: center;
+}
+img
+{
+    display: block;
+    margin: auto;
+}
