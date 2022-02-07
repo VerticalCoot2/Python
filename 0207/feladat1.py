@@ -15,13 +15,23 @@ def afeladat(s1,s2):
         print(round(h),3)
 
 def bfeladat(s1,s2):
+    eredmeny=(s1%s2)%2
+    if eredmeny==0:
+        return"paros"
+    else:
+        return"Páratlan"
+    
 
 
 system("cls")
 def Main():
     so1= int(input("Kérem az 1. tenger sótartalmát"))
     so2= int(input("Kérem az 2. tenger sótartalmát"))
+    print("a.) feladat")
     afeladat(so1,so2)
+    print("a.) feladat")
+    print(bfeladat(so1,so2))
+    
 
 if __name__=="__main__":
     Main()
