@@ -31,6 +31,21 @@ def dfeladat(solista):
             elteresek.append(35-solista[i])
     return elteresek
 
+def efeladat(solista):
+    solista=list(set(solista))
+    solista.sort()
+    for i in range(0,len(solista)):
+        print(solista[i], end=", ")
+
+def ffeladat(solista):
+    for i in range(0, len(solista), 2):
+        print(solista[i], end=" ")
+
+def gfeladat(solista):
+    seged=[]
+    for i in range(0,len(solista),2):
+        seged.append(solista[i])
+    return seged
 
 
 system("cls")
@@ -46,8 +61,15 @@ def Main():
     for i in range(0,20):
         sotartalmak.append(random.randrange(30,41))
     print(*sotartalmak)
+    print("d.)feladat")
     print(*dfeladat(sotartalmak))
-
-
+    print("e.)feladat")
+    efeladat(sotartalmak)
+    print("f.)feladat")
+    #eljárás
+    ffeladat(sotartalmak)
+    print("g.)feladat")
+    #függvény
+    gfeladat(sotartalmak)
 if __name__=="__main__":
     Main()
