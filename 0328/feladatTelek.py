@@ -1,3 +1,4 @@
+from inspect import _void
 from os.path import exists as ex
 from os import system as sis
 
@@ -49,9 +50,12 @@ def feladat4(t):
             print(f"\n{db}db négyzet alakú telek van")
             print(f"{db}db négyzet alakú telek van", file=ki)
         ki.close()
+def feladat5(t):
+    pass
 
-def main():
+def main() -> _void:
     sis('cls')
+    print("TELEK feladat")
     telkek=[]
     be=open("telek.txt","r", encoding="utf-8")
     for sor in be:
@@ -60,3 +64,6 @@ def main():
         sor[3]=int(sor[3])
         telkek.append(sor)
     be.close
+
+if __name__=='__main__':
+    main()
