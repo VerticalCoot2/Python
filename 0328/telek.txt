@@ -1,0 +1,6 @@
+Asztalos Antal 25 30
+Pék József 80 80
+Kelemen János 9 85
+Szabó Áron 120 50
+Varga Imre 130 130
+Szekeres Mihály 25 8
