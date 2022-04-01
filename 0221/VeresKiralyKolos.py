@@ -1,41 +1,27 @@
 from os import system
 
 def aFeladat(aa):
-    min_ = aa[0]
-    mini = 0
-    for i in range(len(aa)):
-        if aa[i] < min_:
-            min_ = aa[i]
-            mini = i + 1
+    b=0
+    for i in aa:
+        if i==min(aa):
+            print(f"A legkissebb érték a(z) {str(min(aa))}, és a(z) {str(i+1)}.-ik napon volt")
+        else:
+            b += 1
 
-    print(f"A legkissebb érték a(z) {min_}, és a(z) {mini}.-ik napon volt")
 def bFeladat(bb):
     jutalek=[]
-    for i in range(len(bb)):
-        jutalek.append(str(f"A váltó jutaléka a(z) {i+1}. napon {bb[i]/0.05} volt."))
+    for i in bb:
+        jutalek.append(str(f"A váltó jutaléka a(z) {i+1}. napon {bb[i]/0.05} volt.\n"))
     return jutalek
 
+def cFeladat(cc):
+    pass
+
 def dFeladat(dd):
-    newlist = []
-
-    for i in range(len(dd)):
-        if(190<dd[i]<315):
-            newlist.append(dd[i]*3)
-
-    return newlist
+    pass
 
 def eFeladat(ee):
-    harom=0
-    ketto=0
-    for i in range(1,len(ee),2):
-        if(ee[i]%3==0):
-            harom+=1
-    if(len(ee)==harom):
-        print("Nincs ilyen")
-    else:
-        for i in range(len(ee/2)):
-            print(ee[i])
-            
+    pass
 
 
 def main():
@@ -43,14 +29,15 @@ def main():
     lp=int(input("hány napon keresztül szeretné megadni?\n"))
     arfolyam=[]
     for i in range(lp):
-        adatok=int(input(f"Adja meg a(z) {i+1}. árat.\n"))
+        adatok=input(f"Adja meg a(z) {i+1}. árat.\n")
         arfolyam.append(adatok)
     print("\n a.) feladat")
     aFeladat(arfolyam)
-    print(f"\n b.) feladat \n{'\n'.join(bFeladat(arfolyam))}\n\nc.)feladat")#imu62262995259225995295292595299529259
+    print(f"\n b.) feladat \n{bFeladat(arfolyam)}\n\nc.)feladat")#imu62262995259225995295292595299529259
     arfolyamok=[299, 310, 297, 321, 318, 301, 285, 392]
     print(*arfolyamok, "\nd.) feladat")
-    dFeladat(arfolyam)
+
+
 
 
 if __name__=='__main__':
